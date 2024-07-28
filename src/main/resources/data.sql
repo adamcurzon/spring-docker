@@ -1,0 +1,1 @@
+INSERT INTO posts (message,created_at) VALUES ("Hello World", NOW());
