@@ -1,24 +1,30 @@
 package com.adamcurzon.api.post;
 
+import java.io.Serial;
+import java.io.Serializable;
+import java.math.BigInteger;
 import java.time.LocalDateTime;
 
-public class Post {
-    private Integer id;
+public class Post implements Serializable {
+    @Serial
+    private static final long serialVersionUID = 1L;
+
+    private BigInteger id;
     private String message;
     private LocalDateTime created_at;
 
-    public Post(Integer id, String message, LocalDateTime created_at){
+    public Post(BigInteger id, String message, LocalDateTime created_at){
         this.id = id;
         this.message = message;
         this.created_at = created_at;
     }
 
 
-    public Integer getId() {
+    public BigInteger getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(BigInteger id) {
         this.id = id;
     }
 
