@@ -34,6 +34,7 @@ public class PostRepository {
 
     public List<Post> findAll()
     {
+        // TODO: implement cache strategy
         return this.jdbcClient.sql("select * from posts").query(Post.class).list();
     }
 
